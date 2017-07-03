@@ -1,0 +1,25 @@
+{
+  "name": "pledgerize",
+  "version": "1.0.0",
+  "description": "Executes an array of promises sequentially",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://dylanitorium@github.com/dylanitorium/pledgerise.git"
+  },
+  "keywords": [
+    "promise",
+    "chain",
+    "sequence",
+    "synchronous"
+  ],
+  "author": "Dylan Sweetensen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dylanitorium/pledgerise/issues"
+  },
+  "homepage": "https://github.com/dylanitorium/pledgerise#readme"
+}
