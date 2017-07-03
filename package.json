@@ -1,7 +1,7 @@
 {
   "name": "pledgerize",
   "version": "1.0.0",
-  "description": "Executes an array of promises sequentially",
+  "description": "Allows an array of data to have a promise returning function executed on each item synchronously",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

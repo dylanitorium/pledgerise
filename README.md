@@ -8,22 +8,32 @@ $ npm install --save pledgerize
 
 ## usage
 
-this:
+This:
 
 ```js
 const result = pledgerize([
-  promiseReturningFunction(),
-  anotherPromiseReturningFunction(),
-  thirdFunction(),
-], (result) => {
-  return result;
+  'project',
+  'project2',
+  'project',
+], (projectName) => {
+    return promiseReturningFunction(projectName);
 })
 ```
 
-does the same as this:
+Does the same as this:
 
 ```js
-const result = promiseReturningFunction()
-  .then(() => (anotherPromiseReturningFunction()))
-  .then(() => (thirdFunction()))
+const result = promiseReturningFunction('project')
+    .then(() => {
+       promiseReturningFunction('project2')
+    })
+    .then(() => {
+       promiseReturningFunction('project')
+    })
 ```
+
+## why?
+
+This came about when I was creating a script to migrate remote repositories and their 'namespaces'.
+If a namespace didn't exist at the destination it was created, to avoid errors, I wanted to process 
+each repository sequentially.
